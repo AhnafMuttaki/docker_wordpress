@@ -1,0 +1,17 @@
+version: "3.7"
+services:
+  wp_app:
+    env_file:
+      - .env
+    build:
+      context: .
+      dockerfile: wordpress.Dockerfile
+      args:
+        - app_port=${WP_APP_PORT}
+    
+    container_name: ${PROJECT_NAME}_wp
+    ports:
+      - 80:80
+    volumes:
+      - ./wordpress:/var/www/html
+    restart: always

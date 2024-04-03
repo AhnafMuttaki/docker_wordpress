@@ -1,0 +1,5 @@
+.env
+wordpress/wp-content/plugins/
+wordpress/wp-content/themes/
+wordpress/wp-content/uploads
+wordpress/wp-config.php
